@@ -1,14 +1,14 @@
 resource "google_container_cluster" "gcp_kubernetes" {
-    name               = "${var.cluster_name}"
-    zone               = "us-west1-a"
-    initial_node_count = "${var.gcp_cluster_count}"
-    additional_zones = [
+    name               = var.cluster_name
+    location           = "us-west1-a"
+    initial_node_count = var.gcp_cluster_count
+    node_locations = [
         "us-west1-b",
         "us-west1-c",
     ]
     master_auth {
-        username = "${var.linux_admin_username}"
-        password = "${var.linux_admin_password}}"
+        username = var.linux_admin_username
+        password = var.linux_admin_password
     }
     node_config {
         oauth_scopes = [
@@ -17,9 +17,6 @@ resource "google_container_cluster" "gcp_kubernetes" {
           "https://www.googleapis.com/auth/logging.write",
           "https://www.googleapis.com/auth/monitoring",
         ]
-        labels {
-            this-is-for = "gitops-example"
-        }
-        tags = ["gitops-example"]
+        tags = ["example-gitops"]
     }
 }

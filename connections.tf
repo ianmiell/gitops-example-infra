@@ -1,5 +1,4 @@
 provider "google" {
-    credentials = "${file("../secrets/account.json")}"
-    project     = "gitops-example"
+    project     = "example-gitops-286316"
     region      = "us-west1"
 }
