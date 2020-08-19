@@ -1,4 +1,4 @@
 provider "google" {
-    project     = "example-gitops-286316"
+    project     = "project1-267721"
     region      = "us-west1"
 }
