@@ -2,9 +2,14 @@
 
 This is adapted from: https://github.com/terraform-providers/terraform-provider-aws.git under: terraform-provider-aws/examples/eks-getting-started
 
-Original README.md below.
 
-To run:
+## Branches
+
+aws - terraform for AWS
+
+gcp - terraform for GCP
+
+## To Run This Up (AWS)
 
 - Set up AWS account with appropriate privileges to create and administer the resources in this terraform module
 
@@ -27,9 +32,16 @@ mv newkubeconfig ~/.kube/config
 kubectx   # choose aws context
 ```
 
+## To Run This Up (GCP)
+
+TODO
 
 
-# EKS Getting Started Guide Configuration
+________________________
+
+Original README.md below.
+
+## EKS Getting Started Guide Configuration
 
 This is the full configuration from https://www.terraform.io/docs/providers/aws/guides/eks-getting-started.html
 
