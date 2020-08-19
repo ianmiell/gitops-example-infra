@@ -2,43 +2,6 @@
 
 This is adapted from: https://github.com/terraform-providers/terraform-provider-aws.git under: terraform-provider-aws/examples/eks-getting-started
 
-
-## Branches
-
-aws - terraform for AWS
-
-gcp - terraform for GCP
-
-## To Run This Up (AWS)
-
-- Set up AWS account with appropriate privileges to create and administer the resources in this terraform module
-
-- Create AWS key
-
-- `aws configure`, using AWS key created above
-
-- `terraform init`
-
-- `terraform plan`
-
-- `terraform apply`
-
-- Configure your `kubectl` to use the config output by terraform, eg:
-
-```
-KUBECONFIG=newfile:~/.kube/config kubectl config view --merge --flatten > newkubeconfig
-cp ~/.kube/config ~/.kube/config.$(date +%s)
-mv newkubeconfig ~/.kube/config
-kubectx   # choose aws context
-```
-
-## To Run This Up (GCP)
-
-TODO
-
-
-________________________
-
 Original README.md below.
 
 ## EKS Getting Started Guide Configuration
