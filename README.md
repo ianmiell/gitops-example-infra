@@ -18,7 +18,16 @@ To run:
 
 - `terraform apply`
 
-- Configure your `kubectl` to use the config output by terraform
+- Configure your `kubectl` to use the config output by terraform, eg:
+
+```
+KUBECONFIG=newfile:~/.kube/config kubectl config view --merge --flatten > newkubeconfig
+cp ~/.kube/config ~/.kube/config.$(date +%s)
+mv newkubeconfig ~/.kube/config
+kubectx   # choose aws context
+```
+
+
 
 # EKS Getting Started Guide Configuration
 
