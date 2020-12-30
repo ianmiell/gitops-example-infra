@@ -5,5 +5,5 @@
 - Enable container services in gcloud: `gcloud services enable container.googleapis.com`
 - `terraform plan`
 - `terraform apply`
-- `gcloud container clusters get-credentials example-gitops --zone us-west1-a`
+- `gcloud container clusters get-credentials gitops-example --zone us-west1-a`
 - Check correct with `kubectx` and `kubectl cluster-info`

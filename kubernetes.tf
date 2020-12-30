@@ -17,6 +17,6 @@ resource "google_container_cluster" "gcp_kubernetes" {
           "https://www.googleapis.com/auth/logging.write",
           "https://www.googleapis.com/auth/monitoring",
         ]
-        tags = ["example-gitops"]
+        tags = ["gitops-example"]
     }
 }
