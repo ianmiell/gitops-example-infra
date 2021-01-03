@@ -1,9 +1,10 @@
 - `gcloud auth login`
-- Create gcp project
-- Get project ID and replace project with that name in connections.tf
-- Set up billing on project
-- Enable container services in gcloud: `gcloud services enable container.googleapis.com`
+- If YOURPROJECTNAME is not in use, or created:
+	- Create gcp project
+	- Get project ID and replace project with YOURPROJECTNAME in connections.tf
+	- Set up billing on YOURPROJECTNAME
+	- Enable container services in gcloud: `gcloud services enable container.googleapis.com`
 - `terraform plan`
 - `terraform apply`
-- `gcloud container clusters get-credentials gitops-example --zone us-west1-a`
-- Check correct with `kubectx` and `kubectl cluster-info`
+- Get creds from right zone into kubeconfig, eg: `gcloud container clusters get-credentials gitops-example --zone us-west1-a`
+- Check config correct with `kubectx` and `kubectl cluster-info`
