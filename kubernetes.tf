@@ -6,10 +6,6 @@ resource "google_container_cluster" "gcp_kubernetes" {
         "us-west1-b",
         "us-west1-c",
     ]
-    master_auth {
-        username = var.linux_admin_username
-        password = var.linux_admin_password
-    }
     node_config {
         oauth_scopes = [
           "https://www.googleapis.com/auth/compute",
