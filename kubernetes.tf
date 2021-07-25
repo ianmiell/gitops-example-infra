@@ -1,11 +1,8 @@
 resource "google_container_cluster" "gcp_kubernetes" {
     name               = var.cluster_name
-    location           = "us-west1-a"
+    location           = var.cluster_cp_location
     initial_node_count = var.gcp_cluster_count
-    node_locations = [
-        "us-west1-b",
-        "us-west1-c",
-    ]
+    node_locations     = var.node_locations
     node_config {
         oauth_scopes = [
           "https://www.googleapis.com/auth/compute",
