@@ -16,3 +16,15 @@ variable "cluster_name" {
     type = string
     description = "Cluster name for the GCP Cluster."
 }
+
+variable "gcp_project_name" {
+    type = string
+    description = "GCP project name."
+    default = "ianmiell-project-1"
+}
+
+variable "gcp_project_region" {
+    type = string
+    description = "GCP Region for this project."
+    default = "us-west-1"
+}
